@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rock Paper Scissors</title> 
+    </head>
+
+    <body>
+        <div class="instructions">
+            <h1>Rock Paper Scissors</h1>
+            <p>Open dev tool and then open the console. Run "game()" without quotation marks to run the game. Try and beat the computer :)</p>
+        </div>
+        <script>
+            let computerPlay = () => {
+                let num=Math.floor(Math.random()*3); 
+                switch (num) {
+                    case 0:
+                        return "rock"; 
+                        break;
+                    case 1: 
+                        return "paper"; 
+                        break; 
+                    case 2:
+                        return "scissors"; 
+                        break;
+                }
+            }
+
+            let x = computerPlay();
+            let gameSingle = (playerSelection, x) => {
+                if (playerSelection.toLowerCase()==="rock" && x==="scissors") {
+                    return "You win! Rock beats scissors"; 
+                } else if (playerSelection.toLowerCase()==="paper" && x==="rock") {
+                    return "You win! Paper beats rock."; 
+                } else if (playerSelection.toLowerCase()==="scissors" && x==="paper") {
+                    return "You win! Scissors beats paper";
+                } else if (x==="rock" && playerSelection.toLowerCase()==="scissors") {
+                    return "Computer win! Rock beats scissors"; 
+                } else if (x==="paper" && playerSelection.toLowerCase()==="rock") {
+                    return "Computer wins! Paper beats rock."; 
+                } else if (x==="scissors" && playerSelection.toLowerCase()==="paper") {
+                    return "Computer wins! Scissors beats paper";
+                } else {
+                    return "DRAW."
+                }
+            }
+
+             
+            let game = () => {
+                let playerScore = 0; 
+                let computerScore = 0;
+                for (i=0; i<5; i++) {
+                    let result=gameSingle(prompt("select"), computerPlay());
+                    console.log(result);
+                    if (result==="You win! Rock beats scissors" || result==="You win! Paper beats rock." || result==="You win! Scissors beats paper") {
+                         playerScore++;
+                     } else if (result==="Computer win! Rock beats scissors"|| result==="Computer wins! Paper beats rock." || result==="Computer wins! Scissors beats paper"){
+                        computerScore++; 
+                     } else {
+                         computerScore++; 
+                         playerScore++;
+                     }
+                     console.log(`Computer ${computerScore} - ${playerScore} Player`);
+                }
+            }
+
+        </script>
+    </body>
+</html>
