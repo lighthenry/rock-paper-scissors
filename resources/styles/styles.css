@@ -8,10 +8,11 @@ h1 {
 }
 
 .buttonsyeh {
-    position: absolute;
+    position: relative;
     top: 300px; 
-    width: 90%; 
-    text-align: center;
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 36em;
 }
 
 .btn {
