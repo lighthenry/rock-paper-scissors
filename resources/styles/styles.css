@@ -1,18 +1,20 @@
-h1 {
+.weapon {
     position: absolute; 
     top: 200px; 
     width: 100%; 
     text-align: center;
+}
+
+h1 {
     font-family: Arial, Helvetica, sans-serif; 
     color:  #868686;
 }
 
 .buttonsyeh {
-    position: relative;
+    position: absolute;
     top: 300px; 
-    margin-left: auto; 
-    margin-right: auto; 
-    width: 36em;
+    text-align: center; 
+    width: 100%;
 }
 
 .btn {
@@ -22,7 +24,7 @@ h1 {
     border-radius: 5px;
     border: 1px solid  #868686;
     background-color:  #868686;
-    color: azure;
+    color: azure; 
 }
 
 .btn:hover {
@@ -31,14 +33,21 @@ h1 {
 }
 
 .rock {
-    margin-left: 200px;
+    margin-left: auto;
 }
 
-.result {
+.scissors {
+    margin-right: auto;
+}
+
+.resultDiv {
     top: 370px; 
     position: absolute; 
     text-align: center; 
     width: 100%;
+}
+
+.result {
     font-family: Arial, Helvetica, sans-serif; 
     color:  #868686;
 }
